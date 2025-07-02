@@ -1,0 +1,14 @@
+services:
+- type: web
+  name: vouchbot
+  env: python
+  plan: free
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "python bot.py"
+  envVars:
+    - key: TOKEN
+      value: your-bot-token-here
+    - key: VOUCH_CHANNEL_ID
+      value: 123456789012345678
+    - key: VOUCH_LOG_CHANNEL_ID
+      value: 123456789012345678
